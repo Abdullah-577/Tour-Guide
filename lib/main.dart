@@ -59,11 +59,21 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      initialRoute: '/login',
+      initialRoute: '/',
       routes: {
-        '/login': (context) => const LoginPage(),
+        '/': (context) => const LoginPage(),
         '/signup': (context) => const SignUpPage(),
         '/location': (context) => const LocationPage(),
+      },
+      onGenerateRoute: (settings) {
+        // Handle any undefined routes
+        return MaterialPageRoute(
+          builder: (context) => Scaffold(
+            body: Center(
+              child: Text('No route defined for ${settings.name}'),
+            ),
+          ),
+        );
       },
     );
   }
