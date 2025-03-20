@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "406797164743",
+    "project_id": "login-67fee",
+    "storage_bucket": "login-67fee.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:406797164743:android:47f2804dda19d7948c9ee2",
+        "android_client_info": {
+          "package_name": "com.company.travelglobeguide"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSrwm8ft22UoMuMjT35VjW5t6-rzXFuf8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:406797164743:android:53044605afb0b81f8c9ee2",
+        "android_client_info": {
+          "package_name": "com.tourapp.tour_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSrwm8ft22UoMuMjT35VjW5t6-rzXFuf8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
