@@ -17,12 +17,10 @@ class _LocationPageState extends State<LocationPage> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        leading: Icon(Icons.add),
         title: const Text(
           'Select Location',
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            color: Colors.black87,
-          ),
+          style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black87),
         ),
         centerTitle: true,
         backgroundColor: Colors.white,
@@ -31,9 +29,8 @@ class _LocationPageState extends State<LocationPage> {
           IconButton(
             icon: const Icon(Icons.logout, color: Colors.black87),
             onPressed: () {
-
               Navigator.of(context).pushReplacementNamed('/');
-              },
+            },
           ),
         ],
       ),
@@ -94,13 +91,14 @@ class _LocationPageState extends State<LocationPage> {
             items: const [
               DropdownMenuItem(
                 value: 'Multan',
-                child: Text('Multan',
-                    style: TextStyle(fontWeight: FontWeight.w500)),
+                child: Text(
+                  'Multan',
+                  style: TextStyle(fontWeight: FontWeight.w500),
+                ),
               ),
               DropdownMenuItem(
                 value: 'None',
-                child: Text('None',
-                    style: TextStyle(color: Colors.grey)),
+                child: Text('None', style: TextStyle(color: Colors.grey)),
               ),
             ],
             onChanged: (value) => setState(() => _selectedCity = value),
@@ -127,13 +125,14 @@ class _LocationPageState extends State<LocationPage> {
             items: const [
               DropdownMenuItem(
                 value: 'Pakistan',
-                child: Text('Pakistan',
-                    style: TextStyle(fontWeight: FontWeight.w500)),
+                child: Text(
+                  'Pakistan',
+                  style: TextStyle(fontWeight: FontWeight.w500),
+                ),
               ),
               DropdownMenuItem(
                 value: 'None',
-                child: Text('None',
-                    style: TextStyle(color: Colors.grey)),
+                child: Text('None', style: TextStyle(color: Colors.grey)),
               ),
             ],
             onChanged: (value) => setState(() => _selectedCountry = value),
@@ -153,7 +152,8 @@ class _LocationPageState extends State<LocationPage> {
             return;
           }
           _showSuccessSnackbar(
-              'Location selected: $_selectedCity, $_selectedCountry');
+            'Location selected: $_selectedCity, $_selectedCountry',
+          );
         },
         style: ElevatedButton.styleFrom(
           backgroundColor: Colors.blue[800],
@@ -166,7 +166,10 @@ class _LocationPageState extends State<LocationPage> {
         child: const Text(
           'Confirm Selection',
           style: TextStyle(
-              color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold),
+            color: Colors.white,
+            fontSize: 16,
+            fontWeight: FontWeight.bold,
+          ),
         ),
       ),
     );
@@ -178,8 +181,7 @@ class _LocationPageState extends State<LocationPage> {
         content: Text(message),
         backgroundColor: Colors.redAccent,
         behavior: SnackBarBehavior.floating,
-        shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(12)),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
         margin: const EdgeInsets.all(20),
       ),
     );
@@ -191,8 +193,7 @@ class _LocationPageState extends State<LocationPage> {
         content: Text(message),
         backgroundColor: Colors.green,
         behavior: SnackBarBehavior.floating,
-        shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(12)),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
         margin: const EdgeInsets.all(20),
       ),
     );
